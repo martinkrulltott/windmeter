@@ -7,7 +7,7 @@ Vue.use(Vuex);
 Vue.use(VueAxios, axios);
 
 const SERVER_URL =
-  process.env.VUE_APP_SERVER_URL |
+  process.env.VUE_APP_SERVER_URL ||
   "https://ancient-hollows-36999.herokuapp.com/";
 
 export default new Vuex.Store({
@@ -21,8 +21,10 @@ export default new Vuex.Store({
   },
   actions: {
     loadStats({ commit }, payload) {
+      const url = SERVER_URL + payload.spot;
+      console.log("Fetching from: " + url);
       axios
-        .get(SERVER_URL + payload.spot)
+        .get(url)
         .then(r => r.data)
         .then(stats => {
           commit("SET_STATS", stats);
