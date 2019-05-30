@@ -44,10 +44,10 @@ export default {
 
 <style scoped lang="scss">
   h2 {
-    margin: 0 0 5px;
+    margin: 0 0 3px;
   }
   p {
-    margin: 5px 0px;
+    margin: 0 0 1px;
     transition: all 2s;
   }
   .hidden {
