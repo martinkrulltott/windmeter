@@ -1,17 +1,20 @@
 <template>
-  <div v-if="stats && stats.windspeed">
+  <div>
     <div class="icon-container">
-      <p class="text">{{ Math.round(stats.windspeed) }}</p>
+      <p class="text" :class="{ hidden: !stats.isLoaded }">{{ Math.round(stats.windspeed) }}</p>
       <img src="../assets/arrow.png" class="arrow" :style="{ transform: 'rotate(' + stats.directiondegrees + 'deg)' }"/>
     </div>
     <h2>{{ spot | capitalize }}</h2>
-    <p>Vind: {{ stats.windspeed }} m/s</p>
-    <p>Byar: {{ stats.gustspeed }} m/s</p>
-    <p>Riktning: {{ stats.directiontext }}</p>
+    <div v-if="stats.isLoaded">
+      <p>Vind: {{ stats.windspeed }} m/s</p>
+      <p>Byar: {{ stats.gustspeed }} m/s</p>
+      <p>Riktning: {{ stats.directiontext }}</p>
+    </div>
+    <div v-else>
+      <p>Laddar...</p>
+    </div>
   </div>
-  <div v-else>
-    <p>Laddar...</p>
-  </div>
+
 </template>
 
 <script>
@@ -41,11 +44,13 @@ export default {
   h2 {
     margin: 0 0 5px;
   }
-
   p {
     margin: 5px 0px;
+    transition: all 2s;
   }
-
+  .hidden {
+    opacity: 0;
+  }
   .icon-container {
     position: relative;
     display: inline-block;
@@ -69,6 +74,6 @@ export default {
     height: 100px;
     padding: 2px;
     opacity: 0.5;
-    transition: all 2s;
+    transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 </style>

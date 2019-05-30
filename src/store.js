@@ -12,10 +12,17 @@ const SERVER_URL =
 
 export default new Vuex.Store({
   state: {
-    stats: []
+    stats: {
+      windspeed: 0,
+      gustspeed: 0,
+      directiontext: "",
+      directiondegrees: 0,
+      isLoaded: false
+    }
   },
   mutations: {
     SET_STATS(state, stats) {
+      stats.isLoaded = true;
       state.stats = stats;
     }
   },
