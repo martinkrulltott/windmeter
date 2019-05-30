@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import WindMeter from '@/components/WindMeter.vue';
+import WindMeter from "@/components/WindMeter.vue";
 
 export default {
-  name: 'home',
+  name: "home",
   components: {
-    'WindMeter': WindMeter,
+    WindMeter: WindMeter
   },
-  props: ['spot'],
+  props: ["spot"]
 };
 </script>
