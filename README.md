@@ -1,4 +1,7 @@
 # windmeter
+A Vue UI for the [Windscraper API](https://github.com/martinkrulltott/windscraper) 
+
+Live example of the app can be found here https://guarded-forest-58184.herokuapp.com/
 
 ## Setup
 ```
