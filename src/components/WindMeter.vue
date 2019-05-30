@@ -9,6 +9,9 @@
     <p>Byar: {{ stats.gustspeed }} m/s</p>
     <p>Riktning: {{ stats.directiontext }}</p>
   </div>
+  <div v-else>
+    <p>Laddar...</p>
+  </div>
 </template>
 
 <script>

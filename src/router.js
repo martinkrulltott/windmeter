@@ -10,6 +10,12 @@ export default new Router({
       path: "/:spot",
       component: () => import("@/views/Home"),
       props: true
+    },
+    {
+      name: "error",
+      path: "/",
+      component: () => import("@/views/Error"),
+      props: true
     }
   ]
 });
