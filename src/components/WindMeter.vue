@@ -1,17 +1,19 @@
 <template>
-  <div>
-    <div class="icon-container">
+  <div class="container">
+    <div class="icon-section">
       <p class="text" :class="{ hidden: !stats.isLoaded }">{{ Math.round(stats.windspeed) }}</p>
       <img src="../assets/arrow.png" class="arrow" :style="{ transform: 'rotate(' + stats.directiondegrees + 'deg)' }"/>
     </div>
-    <h2>{{ spot | capitalize }}</h2>
-    <div v-if="stats.isLoaded">
-      <p>Vind: {{ stats.windspeed }} m/s</p>
-      <p>Byar: {{ stats.gustspeed }} m/s</p>
-      <p>Riktning: {{ stats.directiontext }}</p>
-    </div>
-    <div v-else>
-      <p>Laddar...</p>
+    <div>
+      <h2>{{ spot | capitalize }}</h2>
+      <div v-if="stats.isLoaded">
+        <p>Vind: {{ stats.windspeed }} m/s</p>
+        <p>Byar: {{ stats.gustspeed }} m/s</p>
+        <p>Riktning: {{ stats.directiontext }}</p>
+      </div>
+      <div v-else>
+        <p>Laddar...</p>
+      </div>
     </div>
   </div>
 
@@ -51,13 +53,17 @@ export default {
   .hidden {
     opacity: 0;
   }
-  .icon-container {
+  .container {
+    display: inline-flex;
+  }
+  .icon-section {
     position: relative;
     display: inline-block;
     width: 104px;
     height: 104px;
     border-radius: 100px;
     background: #168BAB;
+    margin-right: 15px;
   }
   .text {
     position: absolute;
