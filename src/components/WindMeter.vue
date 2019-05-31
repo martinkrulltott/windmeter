@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <a :href="stats.link" target="_blank" class="container">
     <div class="icon-section">
       <p class="text" :class="{ hidden: !stats.isLoaded }">
         {{ Math.round(stats.windspeed) }}
@@ -21,7 +21,7 @@
         <p>Laddar...</p>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script>
@@ -60,6 +60,8 @@ p {
 }
 .container {
   display: inline-flex;
+  text-decoration: none;
+  color: inherit;
 }
 .icon-section {
   position: relative;

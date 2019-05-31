@@ -13,6 +13,7 @@ const SERVER_URL =
 export default new Vuex.Store({
   state: {
     stats: {
+      link: "",
       windspeed: 0,
       gustspeed: 0,
       directiontext: "",
