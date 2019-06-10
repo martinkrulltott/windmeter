@@ -1,7 +1,7 @@
 # windmeter
 A Vue UI for the [Windscraper API](https://github.com/martinkrulltott/windscraper) 
 
-Live example of the app can be found here https://guarded-forest-58184.herokuapp.com/
+Live example of the app can be found here https://guarded-forest-58184.herokuapp.com/lomma
 
 ## Setup
 ```
@@ -18,4 +18,15 @@ npm run serve
 If you're running a local instance of Windscraper:
 Create a .env.local file in the root folder with your server url
 Example: VUE_APP_SERVER_URL="http://localhost:3000/"
+```
+
+### Built using
+```
+Vue
+Vuex
+Vue-router
+Axios
+SCSS
+Babel
+Eslint
 ```
