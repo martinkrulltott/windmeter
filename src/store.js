@@ -8,7 +8,7 @@ Vue.use(VueAxios, axios);
 
 const SERVER_URL =
   process.env.VUE_APP_SERVER_URL ||
-  "https://glacial-hollows-51912.herokuapp.com/";
+  "https://kitewindscraper.herokuapp.com/lomma";
 
 export default new Vuex.Store({
   state: {
