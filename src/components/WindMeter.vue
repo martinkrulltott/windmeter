@@ -12,13 +12,16 @@
     </div>
     <div>
       <h2>{{ spot | capitalize }}</h2>
-      <div v-if="stats.isLoaded">
+      <div v-if="!stats.hasError && stats.isLoaded">
         <p>Vind: {{ stats.windspeed }} m/s</p>
         <p>Byar: {{ stats.gustspeed }} m/s</p>
         <p>Riktning: {{ stats.directiontext }}</p>
       </div>
-      <div v-else>
+      <div v-else-if="!stats.hasError && !stats.isLoaded">
         <p>Laddar...</p>
+      </div>
+      <div v-else>
+        <p>Inte tillgänglig just nu :(</p>
       </div>
     </div>
   </a>

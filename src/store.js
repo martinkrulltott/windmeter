@@ -18,13 +18,18 @@ export default new Vuex.Store({
       gustspeed: 0,
       directiontext: "",
       directiondegrees: 0,
-      isLoaded: false
+      isLoaded: false,
+      hasError: false
     }
   },
   mutations: {
     SET_STATS(state, stats) {
-      stats.isLoaded = true;
-      state.stats = stats;
+      if (stats && stats.windspeed) {
+        stats.isLoaded = true;
+        state.stats = stats;
+      } else {
+        state.stats.hasError = true;
+      }
     }
   },
   actions: {
