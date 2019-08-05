@@ -35,7 +35,7 @@ export default {
     this.$store.dispatch("loadStats", { spot: this.spot });
     setInterval(() => {
       this.$store.dispatch("loadStats", { spot: this.spot });
-    }, 10000);
+    }, 60000);
   },
   filters: {
     capitalize: function(value) {
