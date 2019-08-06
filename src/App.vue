@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <h1>{{ API_URL }}</h1>
     <router-view />
   </div>
 </template>
@@ -9,8 +8,6 @@
 export default {
   name: "app"
 };
-
-const API_URL = process.env.API_URL;
 </script>
 
 <style lang="scss">
