@@ -24,19 +24,9 @@ export default new Vuex.Store({
   },
   mutations: {
     SET_STATS(state, stats) {
-      if (stats && stats.WindSpeed) {
-        const result = {
-          name: stats.Name,
-          link: stats.API_JSON_Return_Url,
-          windspeed: stats.WindSpeed,
-          gustspeed: stats.Gust,
-          directiontext: stats.WindDirection_Name,
-          directiondegrees: stats.WindDirection,
-          temperature: stats.Temperature,
-          isLoaded: true,
-          hasError: false
-        }
-        state.stats = result;
+      if (stats && stats.windspeed) {
+        stats.isLoaded = true;
+        state.stats = stats;
       } else {
         state.stats.hasError = true;
       }
