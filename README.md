@@ -1,7 +1,7 @@
 # windmeter
 A Vue UI for the [Windscraper API](https://github.com/martinkrulltott/windscraper) 
 
-Live example of the app can be found here https://kitewindmeter.herokuapp.com/lomma
+Live example of the app can be found here https://kitewindmeter.herokuapp.com/20
 
 ## Setup
 ```
