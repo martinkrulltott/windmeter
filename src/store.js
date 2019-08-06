@@ -6,9 +6,7 @@ import VueAxios from "vue-axios";
 Vue.use(Vuex);
 Vue.use(VueAxios, axios);
 
-const SERVER_URL =
-  process.env.VUE_APP_SERVER_URL ||
-  "";
+const SERVER_URL = process.env.VUE_APP_SERVER_URL;
 
 export default new Vuex.Store({
   state: {
