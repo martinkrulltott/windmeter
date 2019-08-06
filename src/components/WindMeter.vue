@@ -11,7 +11,7 @@
       />
     </div>
     <div>
-      <h2>{{ spot | capitalize }}</h2>
+      <h2>{{ stats.name | capitalize }}</h2>
       <div v-if="!stats.hasError && stats.isLoaded">
         <p>Vind: {{ stats.windspeed }} m/s</p>
         <p>Byar: {{ stats.gustspeed }} m/s</p>
