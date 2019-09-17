@@ -13,6 +13,11 @@ npm install
 npm run serve
 ```
 
+### Unit test with watch
+```
+npm run test
+```
+
 ### Use local server
 ```
 If you're running a local instance of Windscraper:
@@ -29,4 +34,6 @@ Axios
 SCSS
 Babel
 Eslint
+Vue Test Utils
+Jest
 ```
