@@ -1,9 +1,7 @@
 <template>
   <a :href="stats.link" target="_blank" class="container">
     <div class="icon-section">
-      <p class="text" :class="{ hidden: !stats.isLoaded }">
-        {{ Math.round(stats.windspeed) }}
-      </p>
+      <p class="text" :class="{ hidden: !stats.isLoaded }">{{ Math.round(stats.windspeed) }}</p>
       <img
         src="../assets/arrow.png"
         class="arrow"
@@ -36,9 +34,6 @@ export default {
   computed: mapState(["stats"]),
   mounted() {
     this.$store.dispatch("loadStats", { spot: this.spot });
-    setInterval(() => {
-      this.$store.dispatch("loadStats", { spot: this.spot });
-    }, 60000);
   },
   filters: {
     capitalize: function(value) {
